@@ -29,17 +29,3 @@ If you are wondering, and which you should; why should I learn data.table. I hav
 NOTE : From now on we will use Rdatatable and the package data.table interchangebly.
 
 ```
-
-## Speed
-
-> You are officially a programmer the day you have learned basics of R programming. People will expect you to know programming concepts And It will all come naturally to you over time.
-
-***
-
-Please Watch this video before reading anything else. It's a must watch video for anybody trying to learn programming.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JEpsKnWZrJ8" frameborder="0" allowfullscreen></iframe>
-
-I would agree that 
-
-[asldfjladsj](https://h2oai.github.io/db-benchmark/)
