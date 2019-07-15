@@ -17,4 +17,3 @@ Data.table is the fastest package in R. There is no doubt about it. Everybody in
 <br/>
 
 In R people are constantly told that saving a few miliseconds is no good. But if you use a package that save a few miliseconds on every (shft + enter) you press. And you use R everyday for a few years. How many hours will you save simple by switching to a different package. I don't want to hypothetically calculate it but hope you get the picture. And to top it off your code is almost always ready for production. Because it will be the fastest. That will help especially when you want to create a shiny app or a plumber API. As a programmer you should be able to utilize full resources of a computer.
-

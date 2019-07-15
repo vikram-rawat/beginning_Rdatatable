@@ -1,0 +1,122 @@
+# Memory {#memory}
+
+Before we understand memory imprint in R. Lets start with a basic concept in functional programming.
+
+1. Pure function
+2. Impure function.
+
+## Pure function 
+
+Any function that doesn't change the state of all objects in R and return the same value are called pure function.
+
+
+```{r}
+sqrt(2)
+```
+
+```{r}
+log(2)
+```
+
+```{r}
+names(mtcars)
+```
+
+
+functions like these are called pure function. They don't change anything at all and They return the same output given same input. 
+
+## Impure functions
+
+And everything else is impure function. Functions like :
+
+```{r}
+rnorm(2)
+```
+
+```{r}
+library(data.table)
+```
+
+It will load data.table in R and then you can use it afterwards so it does change the state and so does plotting.
+
+```{r}
+plot(mtcars)
+```
+
+
+All these functions Either don't give same output on same input or change the global environment in some way. This is crucial in understanding the next concept.
+
+<br/>
+
+***
+
+
+There are 2 ways an element can be passed in a function.
+
+1. pass by value
+2. pass by reference
+
+
+## Pass by value
+
+Most of the function in R use pass by value. almost all the function in base R use pass by value. Where you create a copy of the object pass it in a function and then return the value out of it. for example read this code.
+
+```{r}
+a <- mtcars
+
+b <- function(a){
+  a <- a[1,]
+  
+  return(a)
+}
+
+b(a)
+```
+
+But it didn't change the actual a
+```{r}
+head(a)
+```
+
+in order to change the actual value of a we will have to pass it in a like this.
+
+```{r}
+a <- b(a)
+
+a
+```
+
+now the a has been change permanently. 
+
+
+
+## Pass by reference
+
+When you work on huge passing by value could sometime crash your programme. Thus data.table provide pass by reference in almost all of it's functions.
+
+```{r}
+
+a <- mtcars
+
+setDT(a)
+
+setnames(x = a,
+         old = names(a),
+         new = toupper(names(a)))
+
+a[, b:= character(.N) ]
+
+head(a)
+```
+
+I have a constantly in the previous example.
+
+1. converted a from a data.frame to data.table
+2. changed all the names from lowercase to uppercase.
+3. added a new empty character column in a
+
+and never in any of the statement have I used the assignment operator.
+
+<br/>
+
+These techniques are very beneficial when will learn about them later in other chapters. For the time being you must understand that data.table provides you an alternative to use your memory more effeciently.
