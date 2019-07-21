@@ -24,7 +24,7 @@
 <meta name="author" content="Vikram Singh Rawat" />
 
 
-<meta name="date" content="2019-07-15" />
+<meta name="date" content="2019-07-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="speed.html">
-
+<link rel="next" href="keystrokes.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -138,6 +138,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="memory.html"><a href="memory.html#pass-by-value"><i class="fa fa-check"></i><b>3.3</b> Pass by value</a></li>
 <li class="chapter" data-level="3.4" data-path="memory.html"><a href="memory.html#pass-by-reference"><i class="fa fa-check"></i><b>3.4</b> Pass by reference</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="keystrokes.html"><a href="keystrokes.html"><i class="fa fa-check"></i><b>4</b> Keystrokes</a></li>
+<li class="part"><span><b>II Beginner</b></span></li>
+<li class="chapter" data-level="5" data-path="syntax.html"><a href="syntax.html"><i class="fa fa-check"></i><b>5</b> Syntax</a></li>
+<li class="chapter" data-level="6" data-path="from1.html"><a href="from1.html"><i class="fa fa-check"></i><b>6</b> From</a></li>
+<li class="chapter" data-level="7" data-path="where1.html"><a href="where1.html"><i class="fa fa-check"></i><b>7</b> Where</a></li>
+<li class="chapter" data-level="8" data-path="select1.html"><a href="select1.html"><i class="fa fa-check"></i><b>8</b> Select</a></li>
+<li class="chapter" data-level="9" data-path="group1.html"><a href="group1.html"><i class="fa fa-check"></i><b>9</b> Group By</a></li>
+<li class="part"><span><b>III Intermediate</b></span></li>
+<li class="chapter" data-level="10" data-path="from2.html"><a href="from2.html"><i class="fa fa-check"></i><b>10</b> From</a></li>
+<li class="chapter" data-level="11" data-path="where2.html"><a href="where2.html"><i class="fa fa-check"></i><b>11</b> Where</a></li>
+<li class="chapter" data-level="12" data-path="select2.html"><a href="select2.html"><i class="fa fa-check"></i><b>12</b> Select</a></li>
+<li class="chapter" data-level="13" data-path="group2.html"><a href="group2.html"><i class="fa fa-check"></i><b>13</b> Group By</a></li>
+<li class="chapter" data-level="14" data-path="update.html"><a href="update.html"><i class="fa fa-check"></i><b>14</b> Update</a></li>
+<li class="chapter" data-level="15" data-path="addcolumn.html"><a href="addcolumn.html"><i class="fa fa-check"></i><b>15</b> Add Column</a></li>
+<li class="chapter" data-level="16" data-path="append.html"><a href="append.html"><i class="fa fa-check"></i><b>16</b> Append</a></li>
+<li class="chapter" data-level="17" data-path="join.html"><a href="join.html"><i class="fa fa-check"></i><b>17</b> Join</a></li>
+<li class="part"><span><b>IV Advanced</b></span></li>
+<li class="chapter" data-level="18" data-path="melt.html"><a href="melt.html"><i class="fa fa-check"></i><b>18</b> Melt</a></li>
+<li class="chapter" data-level="19" data-path="cast.html"><a href="cast.html"><i class="fa fa-check"></i><b>19</b> Dcast</a></li>
+<li class="chapter" data-level="20" data-path="split.html"><a href="split.html"><i class="fa fa-check"></i><b>20</b> tstrsplit</a></li>
+<li class="chapter" data-level="21" data-path="sd.html"><a href="sd.html"><i class="fa fa-check"></i><b>21</b> .SD</a></li>
+<li class="chapter" data-level="22" data-path="sdcols.html"><a href="sdcols.html"><i class="fa fa-check"></i><b>22</b> .SDcols</a></li>
+<li class="chapter" data-level="23" data-path="later.html"><a href="later.html"><i class="fa fa-check"></i><b>23</b> Delayed calculation {}</a></li>
+<li class="chapter" data-level="24" data-path="set.html"><a href="set.html"><i class="fa fa-check"></i><b>24</b> setFunctions</a></li>
+<li class="chapter" data-level="25" data-path="date.html"><a href="date.html"><i class="fa fa-check"></i><b>25</b> IDate</a></li>
+<li class="chapter" data-level="26" data-path="time.html"><a href="time.html"><i class="fa fa-check"></i><b>26</b> ITime</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -181,10 +207,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.2</span> Impure functions</h2>
 <p>And everything else is impure function. Functions like :</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">rnorm</span>(<span class="dv">2</span>)</a></code></pre></div>
-<pre><code>## [1] 0.3021808 1.3979849</code></pre>
+<pre><code>## [1] -0.08340992 -0.22842758</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">library</span>(data.table)</a></code></pre></div>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">plot</span>(mtcars)</a></code></pre></div>
 <p><img src="begining_rdatatable_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>library will load data.table or any package in R and then you can use it afterwards so it does change the current state of R and Plotting is impure for same reason. While rnorm will produce different result on same input every time.</p>
 <p>All these functions Either don’t give same output on same input or change the global environment in some way. This is crucial in understanding the next concept.</p>
 <p><br/></p>
 <hr />
@@ -254,7 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>and never in any of the statement have I used the assignment operator.</p>
 <p><br/></p>
-<p>This techniques are very beneficial when will learn about them later in other chapters. for the time being you must understand that data.table provides you an alternative to use your memory more effeciently.</p>
+<p>These techniques are very beneficial when will learn about them later in other chapters. For the time being you must understand that data.table provides you an alternative to use your memory more effeciently.</p>
 
 </div>
 </div>
@@ -263,8 +290,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="speed.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="speed.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="keystrokes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

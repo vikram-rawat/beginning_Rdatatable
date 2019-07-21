@@ -37,12 +37,13 @@ rnorm(2)
 library(data.table)
 ```
 
-It will load data.table in R and then you can use it afterwards so it does change the state and so does plotting.
-
 ```{r}
 plot(mtcars)
 ```
 
+
+
+library will load data.table or any package in R and then you can use it afterwards so it does change the current state of R and Plotting is impure for same reason. While rnorm will produce different result on same input every time.
 
 All these functions Either don't give same output on same input or change the global environment in some way. This is crucial in understanding the next concept.
 
