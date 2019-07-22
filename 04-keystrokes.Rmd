@@ -33,3 +33,5 @@ mt[,lapply(.SD,function(x){ as.integer(x)})]
 ```
 
 While this will return a data.frame as we needed. We will explain each of these points later on in the book. For the time being just try to understand that even less keystrokes can help you a lot in EDA ( exploratory data analysis ).
+
+Lets start exploration of the package together.
