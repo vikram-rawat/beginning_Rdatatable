@@ -1,1 +1,35 @@
 # Keystrokes {#keystrokes}
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(data.table)
+library(magrittr)
+```
+
+This is a highly controversial topic. People could regard that as a disadvantage as well. But I beg to differ because once you understand a syntax very well you don't need an explaination of it ever again. Most common of these function are **lm(), rnorm(), <-, == etc...** from base R. You use these syntax everyday without ever looking for documentation for these functions. Because I am sure you have learned them pretty well. But they are nothing more than just plain symbols.
+
+Take for example If I ask you to **add 3 4 times** using $3+3+3+3$ or **multiply 3 4 times** using $3\times3\times3\times3$ you would be frustrated while $3\times4$ and $3^4$ is much more consise. Same logic for  is far more understandable. Symbols like $\sum|\int|\ln|\pi|$ can take some time to understand but will help explain complex ideas easily later on.
+
+data.table has a very clear and consise syntax. For example:
+
+1. group by is optional
+2. select arguement is optional
+3. you don't have to decide arguement names
+4. .SD == Subset of Data
+5. .SDcols == cols to be chosen for .SD
+6. .() == list()
+7. := == update or append data
+8. ":=" == multiple updates in a data
+9. Automatic conversion of list into columns like :
+
+```{r}
+mtcars %>% lapply(function(x){ as.integer(x)})
+```
+
+Here it will return a list of vectors
+
+```{r}
+mt <- data.table(mtcars)
+mt[,lapply(.SD,function(x){ as.integer(x)})]
+```
+
+While this will return a data.frame as we needed. We will explain each of these points later on in the book. For the time being just try to understand that even less keystrokes can help you a lot in EDA ( exploratory data analysis ).
