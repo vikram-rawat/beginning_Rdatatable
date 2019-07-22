@@ -22,14 +22,22 @@ data.table has a very clear and consise syntax. For example:
 9. Automatic conversion of list into columns like :
 
 ```{r}
-mtcars %>% lapply(function(x){ as.integer(x)})
+mtcars %>%
+  head() %>% 
+  lapply(function(x){ as.integer(x)})
 ```
 
 Here it will return a list of vectors
 
 ```{r}
 mt <- data.table(mtcars)
-mt[,lapply(.SD,function(x){ as.integer(x)})]
+mt[,
+   lapply(.SD,
+          function(x){ as.integer(x)}
+          )
+   ][,
+     head(.SD)
+     ]
 ```
 
 While this will return a data.frame as we needed. We will explain each of these points later on in the book. For the time being just try to understand that even less keystrokes can help you a lot in EDA ( exploratory data analysis ).
